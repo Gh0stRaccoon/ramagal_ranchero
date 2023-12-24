@@ -32,7 +32,7 @@
   <div class="menu" class:active={menuOpen}>
     <ul>
       <li><a href="#">Inicio</a></li>
-      <li><a href="#">Servicios</a></li>
+      <li><a href="#servicios">Servicios</a></li>
       <li><a href="#">Contacto</a></li>
     </ul>
   </div>
@@ -45,13 +45,14 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 2rem;
-    height: 10vh;
+    padding: 0 1rem;
+    height: 10dvh;
     background: transparent;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
     z-index: 1;
+    transform: translateX(-50%);
   }
   .text-logo {
     font-size: 1.5rem;
@@ -115,6 +116,20 @@
     }
     .menu {
       display: block;
+      position: static;
+      width: fit-content;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .menu ul {
+      flex-direction: row;
+    }
+    .menu ul li a {
+      margin: 0;
+      width: auto;
+      background: none;
     }
   }
 </style>
